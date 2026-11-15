@@ -87,6 +87,21 @@ key in `.env`, recreate the container to pass the new value:
 docker compose up -d --force-recreate ai
 ```
 
+### VS Code tasks on Windows
+
+The repository includes Docker management tasks in `.vscode/tasks.json`. To run
+them against Docker Desktop on Windows, open the repository in a regular local
+VS Code window (not a window attached to the Dev Container). Tasks run where
+the current VS Code workspace runs; in a Dev Container window, they would run
+inside that container instead.
+
+Open **Terminal > Run Task...** or press `Ctrl+Shift+P` and choose **Tasks: Run
+Task**. Available tasks include building and starting the service, listing
+containers, following logs, opening a container shell, launching Vibe,
+restarting, stopping, and starting the service. **Docker: Stop and remove
+container (keep data)** runs `docker compose down`; it preserves the named Vibe
+volume.
+
 Mistral Vibe is the interactive coding assistant CLI, similar in purpose to
 Claude Code. Start it in the project from the container:
 

@@ -1,0 +1,121 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Docker: Build development image",
+      "type": "shell",
+      "command": "docker",
+      "args": ["compose", "build", "ai"],
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "group": "build",
+      "problemMatcher": []
+    },
+    {
+      "label": "Docker: Start development container",
+      "type": "shell",
+      "command": "docker",
+      "args": ["compose", "up", "--detach", "--build", "ai"],
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "Docker: List containers",
+      "type": "shell",
+      "command": "docker",
+      "args": ["compose", "ps", "--all"],
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "Docker: Follow container logs",
+      "type": "shell",
+      "command": "docker",
+      "args": ["compose", "logs", "--follow", "ai"],
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "presentation": {
+        "reveal": "always",
+        "panel": "dedicated",
+        "focus": true
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "Docker: Open container shell",
+      "type": "shell",
+      "command": "docker",
+      "args": ["compose", "exec", "ai", "bash"],
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "presentation": {
+        "reveal": "always",
+        "panel": "dedicated",
+        "focus": true
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "Mistral Vibe: Start assistant",
+      "type": "shell",
+      "command": "docker",
+      "args": ["compose", "exec", "ai", "vibe"],
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "presentation": {
+        "reveal": "always",
+        "panel": "dedicated",
+        "focus": true
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "Docker: Restart container",
+      "type": "shell",
+      "command": "docker",
+      "args": ["compose", "restart", "ai"],
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "Docker: Stop container",
+      "type": "shell",
+      "command": "docker",
+      "args": ["compose", "stop", "ai"],
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "Docker: Start stopped container",
+      "type": "shell",
+      "command": "docker",
+      "args": ["compose", "start", "ai"],
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "Docker: Stop and remove container (keep data)",
+      "type": "shell",
+      "command": "docker",
+      "args": ["compose", "down"],
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "problemMatcher": []
+    }
+  ]
+}
