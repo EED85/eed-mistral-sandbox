@@ -1,0 +1,21 @@
+services:
+  ai:
+    build:
+      context: .
+      dockerfile: .devcontainer/Dockerfile
+    working_dir: /workspace
+    stdin_open: true
+    tty: true
+    init: true
+    restart: unless-stopped
+    command: ["sleep", "infinity"]
+    ports:
+      - "127.0.0.1:4000:4000"
+    environment:
+      MISTRAL_API_KEY: ${MISTRAL_API_KEY:-}
+    volumes:
+      - .:/workspace
+      - vibe-home:/home/vscode/.vibe
+
+volumes:
+  vibe-home:

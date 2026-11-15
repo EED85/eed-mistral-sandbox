@@ -1,8 +1,9 @@
 {
   "name": "uv-python-dev",
-  "build": {
-    "dockerfile": "Dockerfile"
-  },
+  "dockerComposeFile": "../docker-compose.yml",
+  "service": "ai",
+  "workspaceFolder": "/workspace",
+  "shutdownAction": "none",
   "customizations": {
     "vscode": {
       "extensions": [
