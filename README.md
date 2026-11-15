@@ -98,7 +98,8 @@ inside that container instead.
 Open **Terminal > Run Task...** or press `Ctrl+Shift+P` and choose **Tasks: Run
 Task**. Available tasks include building and starting the service, listing
 containers, following logs, opening a container shell, launching Vibe,
-restarting, stopping, and starting the service. **Docker: Stop and remove
+stopping all Vibe sessions (requires typing `KILL` to confirm), restarting,
+stopping, and starting the service. **Docker: Stop and remove
 container (keep data)** runs `docker compose down`; it preserves the named Vibe
 volume.
 

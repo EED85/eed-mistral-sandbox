@@ -1,5 +1,13 @@
 {
   "version": "2.0.0",
+  "inputs": [
+    {
+      "id": "confirmKillVibeSessions",
+      "type": "promptString",
+      "description": "Type KILL to terminate all Vibe sessions in the container",
+      "default": ""
+    }
+  ],
   "tasks": [
     {
       "label": "Docker: Build development image",
@@ -74,6 +82,27 @@
         "reveal": "always",
         "panel": "dedicated",
         "focus": true
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "Mistral Vibe: Kill all sessions",
+      "type": "shell",
+      "command": "docker",
+      "args": [
+        "compose",
+        "exec",
+        "--no-TTY",
+        "ai",
+        "bash",
+        "/workspace/.devcontainer/kill-vibe-sessions.sh",
+        "${input:confirmKillVibeSessions}"
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}",
+        "env": {
+          "MSYS_NO_PATHCONV": "1"
+        }
       },
       "problemMatcher": []
     },
