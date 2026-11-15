@@ -10,6 +10,13 @@
   ],
   "tasks": [
     {
+      "label": "Docker: Start Docker Desktop",
+      "type": "shell",
+      "command": "docker",
+      "args": ["desktop", "start"],
+      "problemMatcher": []
+    },
+    {
       "label": "Docker: Build development image",
       "type": "shell",
       "command": "docker",
@@ -28,6 +35,8 @@
       "options": {
         "cwd": "${workspaceFolder}"
       },
+      "dependsOn": "Docker: Start Docker Desktop",
+      "dependsOrder": "sequence",
       "problemMatcher": []
     },
     {

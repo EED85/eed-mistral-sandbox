@@ -96,10 +96,12 @@ the current VS Code workspace runs; in a Dev Container window, they would run
 inside that container instead.
 
 Open **Terminal > Run Task...** or press `Ctrl+Shift+P` and choose **Tasks: Run
-Task**. Available tasks include building and starting the service, listing
-containers, following logs, opening a container shell, launching Vibe,
-stopping all Vibe sessions (requires typing `KILL` to confirm), restarting,
-stopping, and starting the service. **Docker: Stop and remove
+Task**. **Docker: Start development container** first starts Docker Desktop,
+waits for its engine, then builds and starts the service. You can also run
+**Docker: Start Docker Desktop** on its own. Other tasks include building the
+image, listing containers, following logs, opening a container shell,
+launching Vibe, stopping all Vibe sessions (requires typing `KILL` to confirm),
+restarting, stopping, and starting the service. **Docker: Stop and remove
 container (keep data)** runs `docker compose down`; it preserves the named Vibe
 volume.
 
