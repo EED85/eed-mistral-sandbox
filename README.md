@@ -114,6 +114,49 @@ docker compose exec ai uv run litellm --host 0.0.0.0 --model mistral/mistral-lar
 
 The proxy is available on localhost port 4000 while it is running.
 
+### Local Windows folders
+
+The local-only `docker-compose.override.yml` mounts these Windows folders into
+the container:
+
+| Windows folder | Container path | Access |
+| --- | --- | --- |
+| `C:\Users\ericb\OneDrive - EED-Solutions by Eric Brahmann\Dokumente\ai\read` | `/data/read` | Read-only |
+| `C:\dev` | `/host/dev` | Read/write |
+| `C:\Users\ericb\OneDrive - EED-Solutions by Eric Brahmann\Dokumente\ai\write` | `/data/write` | Read/write |
+
+Inside the local container, these container paths are also available through
+environment variables:
+
+| Variable | Value |
+| --- | --- |
+| `DATA_READ_DIR` | `/data/read` |
+| `HOST_DEV_DIR` | `/host/dev` |
+| `DATA_WRITE_DIR` | `/data/write` |
+
+For example, Python can read them like this:
+
+```python
+import os
+from pathlib import Path
+
+read_dir = Path(os.environ["DATA_READ_DIR"])
+write_dir = Path(os.environ["DATA_WRITE_DIR"])
+```
+
+The variables contain container paths, not Windows paths. In Codespaces, where
+the local Windows folders are not mounted, these optional variables are empty.
+
+This override file is git-ignored and is automatically merged by Docker Compose
+when run from this repository on this PC. It is intentionally not present in
+GitHub Codespaces, where those Windows drives do not exist; Codespaces uses
+only the regular `docker-compose.yml`. Start or recreate the local service
+after changing mounts with:
+
+```powershell
+docker compose up -d --force-recreate ai
+```
+
 ## Other
 
 Test EED85-machine

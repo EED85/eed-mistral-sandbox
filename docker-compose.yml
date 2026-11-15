@@ -13,6 +13,9 @@ services:
       - "127.0.0.1:4000:4000"
     environment:
       MISTRAL_API_KEY: ${MISTRAL_API_KEY:-}
+      DATA_READ_DIR: ${DATA_READ_DIR:-}
+      HOST_DEV_DIR: ${HOST_DEV_DIR:-}
+      DATA_WRITE_DIR: ${DATA_WRITE_DIR:-}
     volumes:
       - .:/workspace
       - vibe-home:/home/vscode/.vibe
