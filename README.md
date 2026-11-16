@@ -118,7 +118,8 @@ volume is local to Docker and is not committed to Git.
 The container also includes `eza`, `fzf`, and Starship. Starship is the default
 prompt in interactive Bash shells; fzf's Bash key bindings are loaded on shell
 startup (for example, `Ctrl+R` for history search and `Ctrl+T` for file
-search).
+search). DuckDB is installed with the `encodings`, `excel`, `httpfs`, and
+`quack` core extensions.
 
 LiteLLM is installed as a `uv` development dependency, so `uv sync` makes its
 `litellm` command available in the project environment. LiteLLM provides an API
@@ -141,7 +142,13 @@ the container:
 | --- | --- | --- |
 | `C:\Users\ericb\OneDrive - EED-Solutions by Eric Brahmann\Dokumente\ai\read` | `/data/read` | Read-only |
 | `C:\dev` | `/host/dev` | Read/write |
+| `C:\dev\github\EED85\privat\vibe-skills` | `/home/vscode/.agents/skills` | Read-only |
 | `C:\Users\ericb\OneDrive - EED-Solutions by Eric Brahmann\Dokumente\ai\write` | `/data/write` | Read/write |
+
+Vibe automatically discovers skills under `/home/vscode/.agents/skills`, so
+skills added to the local `privat\vibe-skills` folder are available in the
+container without editing Vibe's persistent configuration. Run `/reload` in
+an existing Vibe session to discover newly added or changed skills.
 
 Inside the local container, these container paths are also available through
 environment variables:

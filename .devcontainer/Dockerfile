@@ -62,4 +62,5 @@ RUN useradd -m vscode && \
 ENV UV_TOOL_BIN_DIR=/home/vscode/.local/bin
 ENV PATH="/home/vscode/.local/bin:${PATH}"
 USER vscode
-RUN uv tool install mistral-vibe
+RUN duckdb -c "INSTALL encodings; INSTALL excel; INSTALL httpfs; INSTALL quack;" && \
+    uv tool install mistral-vibe
