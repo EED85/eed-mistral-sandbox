@@ -87,6 +87,27 @@ key in `.env`, recreate the container to pass the new value:
 docker compose up -d --force-recreate ai
 ```
 
+To back up one user's Vibe conversations outside Docker, you can bind-mount
+`/home/vscode/.vibe` to that user's folder on a synced drive (for example,
+OneDrive) by adding this to the local-only `docker-compose.override.yml`:
+
+```yaml
+services:
+  ai:
+    volumes:
+      - type: bind
+        source: 'C:/Users/<your-user>/OneDrive/Documents/vibe-data'
+        target: /home/vscode/.vibe
+```
+
+Replace the example source with an existing folder on your machine. Stop the
+container and copy any existing Vibe data from the `vibe-home` Docker volume
+into it before switching; Compose does not migrate that data automatically.
+Keep this folder private to that user and avoid using it concurrently from
+multiple Vibe instances. A sync service can provide off-device backup, but
+check that it has finished syncing before relying on a recent conversation
+being backed up.
+
 ### VS Code tasks on Windows
 
 The repository includes Docker management tasks in `.vscode/tasks.json`. To run
