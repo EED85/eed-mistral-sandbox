@@ -1,0 +1,360 @@
+{
+  "communities": {
+    "0": [
+      "github_workflows_ci_generate_parameters_steps",
+      "github_workflows_ci_jobs_pytests_cov",
+      "github_workflows_ci_lint_steps",
+      "github_workflows_ci_pytests_cov_name",
+      "github_workflows_ci_pytests_cov_needs",
+      "github_workflows_ci_pytests_cov_runs_on",
+      "github_workflows_ci_pytests_cov_steps",
+      "github_workflows_ci_pytests_steps",
+      "github_workflows_ci_steps_id",
+      "github_workflows_ci_steps_name",
+      "github_workflows_ci_steps_run",
+      "github_workflows_ci_steps_uses",
+      "github_workflows_ci_steps_with",
+      "github_workflows_ci_with_checkout_code",
+      "github_workflows_ci_with_fail_under",
+      "github_workflows_ci_with_install_dependencies",
+      "github_workflows_ci_with_install_uv",
+      "github_workflows_ci_with_path",
+      "github_workflows_ci_with_python_version",
+      "github_workflows_ci_with_ref",
+      "github_workflows_ci_with_repository",
+      "github_workflows_ci_with_sparse_checkout",
+      "github_workflows_ci_with_version_file"
+    ],
+    "1": [
+      "docker_compose",
+      "docker_compose_ai_build",
+      "docker_compose_ai_command",
+      "docker_compose_ai_environment",
+      "docker_compose_ai_init",
+      "docker_compose_ai_ports",
+      "docker_compose_ai_restart",
+      "docker_compose_ai_stdin_open",
+      "docker_compose_ai_tty",
+      "docker_compose_ai_volumes",
+      "docker_compose_ai_working_dir",
+      "docker_compose_build_context",
+      "docker_compose_build_dockerfile",
+      "docker_compose_environment_data_read_dir",
+      "docker_compose_environment_data_write_dir",
+      "docker_compose_environment_host_dev_dir",
+      "docker_compose_environment_mistral_api_key",
+      "docker_compose_services",
+      "docker_compose_services_ai",
+      "docker_compose_volumes",
+      "docker_compose_volumes_vibe_home"
+    ],
+    "2": [
+      "collections_abc",
+      "eed_basic_utils_os",
+      "fixture",
+      "importlib",
+      "path",
+      "pathlib",
+      "pytest",
+      "src_eed_package_template_hello_world",
+      "src_eed_package_template_hello_world_hello_world",
+      "src_eed_package_template_hello_world_rationale_5",
+      "src_eed_package_template_init",
+      "tests_conftest",
+      "tests_conftest_cfg_test",
+      "tests_test_hello_world",
+      "tests_test_hello_world_test_hello_world",
+      "tests_test_package_import",
+      "tests_test_package_import_test_package_import",
+      "tomllib"
+    ],
+    "3": [
+      "github_workflows_ci",
+      "github_workflows_ci_generate_parameters_name",
+      "github_workflows_ci_generate_parameters_outputs",
+      "github_workflows_ci_generate_parameters_runs_on",
+      "github_workflows_ci_jobs",
+      "github_workflows_ci_jobs_generate_parameters",
+      "github_workflows_ci_jobs_lint",
+      "github_workflows_ci_jobs_pytests",
+      "github_workflows_ci_lint_name",
+      "github_workflows_ci_lint_runs_on",
+      "github_workflows_ci_name",
+      "github_workflows_ci_outputs_matrix",
+      "github_workflows_ci_pytests_name",
+      "github_workflows_ci_pytests_needs",
+      "github_workflows_ci_pytests_runs_on",
+      "github_workflows_ci_pytests_strategy",
+      "github_workflows_ci_strategy_matrix"
+    ],
+    "4": [
+      "THIRD_PARTY_NOTICES",
+      "THIRD_PARTY_NOTICES_graphify",
+      "graphifyy",
+      "vibe_skill_creator",
+      "vibe_skills_writing_skills_raw_karpathy_llm_wiki",
+      "vibe_skills_writing_skills_skill",
+      "writing_skills_skill_raw_karpathy_llm_wiki",
+      "writing_skills_skill_raw_vibe_skill_creator",
+      "writing_skills_skill_wiki_concept_knowledge_graph",
+      "writing_skills_skill_wiki_concept_llm_wiki_pattern",
+      "writing_skills_skill_wiki_concept_skill_anatomy",
+      "writing_skills_skill_wiki_index",
+      "writing_skills_skill_wiki_log",
+      "writing_skills_skill_wiki_source_karpathy_llm_wiki",
+      "writing_skills_skill_wiki_source_vibe_skill_creator"
+    ],
+    "5": [
+      "github_workflows_pytests_cov",
+      "github_workflows_pytests_cov_jobs",
+      "github_workflows_pytests_cov_jobs_pytpytests_covests",
+      "github_workflows_pytests_cov_name",
+      "github_workflows_pytests_cov_on",
+      "github_workflows_pytests_cov_on_workflow_dispatch",
+      "github_workflows_pytests_cov_pytpytests_covests_runs_on",
+      "github_workflows_pytests_cov_pytpytests_covests_steps",
+      "github_workflows_pytests_cov_steps_id",
+      "github_workflows_pytests_cov_steps_name",
+      "github_workflows_pytests_cov_steps_run",
+      "github_workflows_pytests_cov_steps_uses",
+      "github_workflows_pytests_cov_steps_with",
+      "github_workflows_pytests_cov_with_package_name",
+      "github_workflows_pytests_cov_with_version"
+    ],
+    "6": [
+      "github_workflows_update_eed_basic_utils",
+      "github_workflows_update_eed_basic_utils_jobs",
+      "github_workflows_update_eed_basic_utils_jobs_update_eed_basic_utils",
+      "github_workflows_update_eed_basic_utils_name",
+      "github_workflows_update_eed_basic_utils_on",
+      "github_workflows_update_eed_basic_utils_on_workflow_dispatch",
+      "github_workflows_update_eed_basic_utils_secrets_gh_pat",
+      "github_workflows_update_eed_basic_utils_update_eed_basic_utils_secrets",
+      "github_workflows_update_eed_basic_utils_update_eed_basic_utils_uses",
+      "github_workflows_update_eed_basic_utils_update_eed_basic_utils_with",
+      "github_workflows_update_eed_basic_utils_with_package_name"
+    ],
+    "7": [
+      "README",
+      "README_dev_container",
+      "README_github_actions",
+      "README_litellm",
+      "README_local_windows_folders",
+      "README_mistral_vibe",
+      "README_vs_code_tasks",
+      "eed_gha_workflows",
+      "eed_package_template"
+    ],
+    "8": [
+      "pre_commit_config",
+      "pre_commit_config_hooks_args",
+      "pre_commit_config_hooks_id",
+      "pre_commit_config_hooks_types_or",
+      "pre_commit_config_repos",
+      "pre_commit_config_repos_hooks",
+      "pre_commit_config_repos_repo",
+      "pre_commit_config_repos_rev"
+    ],
+    "9": [
+      "github_workflows_pytests",
+      "github_workflows_pytests_jobs",
+      "github_workflows_pytests_jobs_pytests",
+      "github_workflows_pytests_name",
+      "github_workflows_pytests_on",
+      "github_workflows_pytests_on_workflow_dispatch",
+      "github_workflows_pytests_pytests_uses"
+    ],
+    "10": [
+      "github_workflows_ruff",
+      "github_workflows_ruff_jobs",
+      "github_workflows_ruff_jobs_ruff",
+      "github_workflows_ruff_name",
+      "github_workflows_ruff_on",
+      "github_workflows_ruff_on_workflow_dispatch",
+      "github_workflows_ruff_ruff_uses"
+    ],
+    "11": [
+      "github_workflows_ci_on",
+      "github_workflows_ci_on_pull_request",
+      "github_workflows_ci_on_push",
+      "github_workflows_ci_on_workflow_dispatch",
+      "github_workflows_ci_pull_request_branches",
+      "github_workflows_ci_push_branches"
+    ],
+    "12": [
+      "devcontainer_kill_vibe_sessions",
+      "devcontainer_kill_vibe_sessions_find_vibe_pids",
+      "devcontainer_kill_vibe_sessions_sh__entry"
+    ],
+    "13": [
+      "eed_basic_utils",
+      "instructions_py"
+    ],
+    "14": [
+      "pkg_eed_package_template"
+    ]
+  },
+  "cohesion": {
+    "0": 0.11067193675889328,
+    "1": 0.09523809523809523,
+    "2": 0.1437908496732026,
+    "3": 0.11764705882352941,
+    "4": 0.21904761904761905,
+    "5": 0.13333333333333333,
+    "6": 0.18181818181818182,
+    "7": 0.2222222222222222,
+    "8": 0.25,
+    "9": 0.2857142857142857,
+    "10": 0.2857142857142857,
+    "11": 0.3333333333333333,
+    "12": 0.6666666666666666,
+    "13": 1.0,
+    "14": 1.0
+  },
+  "gods": [
+    {
+      "id": "github_workflows_ci_steps_with",
+      "label": "with",
+      "degree": 14
+    },
+    {
+      "id": "docker_compose_services_ai",
+      "label": "ai",
+      "degree": 11
+    },
+    {
+      "id": "vibe_skills_writing_skills_skill",
+      "label": "Writing Skills Skill",
+      "degree": 9
+    },
+    {
+      "id": "README",
+      "label": "README",
+      "degree": 8
+    },
+    {
+      "id": "writing_skills_skill_wiki_index",
+      "label": "Wiki Index",
+      "degree": 7
+    },
+    {
+      "id": "github_workflows_ci_generate_parameters_steps",
+      "label": "steps",
+      "degree": 6
+    },
+    {
+      "id": "github_workflows_ci_jobs_pytests",
+      "label": "pytests",
+      "degree": 6
+    },
+    {
+      "id": "github_workflows_pytests_cov_pytpytests_covests_steps",
+      "label": "steps",
+      "degree": 6
+    },
+    {
+      "id": "github_workflows_ci_jobs_pytests_cov",
+      "label": "pytests_cov",
+      "degree": 5
+    },
+    {
+      "id": "docker_compose_ai_environment",
+      "label": "environment",
+      "degree": 5
+    }
+  ],
+  "surprises": [
+    {
+      "source": "test_hello_world()",
+      "target": "hello_world()",
+      "source_files": [
+        "tests/test_hello_world.py",
+        "src/eed_package_template/hello_world.py"
+      ],
+      "confidence": "INFERRED",
+      "relation": "calls",
+      "why": "inferred connection - not explicitly stated in source; connects across different repos/directories"
+    },
+    {
+      "source": "Knowledge Graph Concept",
+      "target": "Graphifyy",
+      "source_files": [
+        ".vibe/skills/writing-skills/wiki/concepts/knowledge-graph-graphifyy.md",
+        "THIRD_PARTY_NOTICES.md"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "cites",
+      "why": "connects across different repos/directories"
+    },
+    {
+      "source": "Writing Skills Skill",
+      "target": "Karpathy LLM Wiki Raw Source",
+      "source_files": [
+        ".vibe/skills/writing-skills/SKILL.md",
+        ".vibe/skills/writing-skills/raw/karpathy-llm-wiki.md"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "references",
+      "why": "peripheral node `Karpathy LLM Wiki Raw Source` unexpectedly reaches hub `Writing Skills Skill`"
+    },
+    {
+      "source": "Writing Skills Skill",
+      "target": "Vibe Skill Creator Raw Source",
+      "source_files": [
+        ".vibe/skills/writing-skills/SKILL.md",
+        ".vibe/skills/writing-skills/raw/vibe-skill-creator-SKILL.md"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "references",
+      "why": "peripheral node `Vibe Skill Creator Raw Source` unexpectedly reaches hub `Writing Skills Skill`"
+    },
+    {
+      "source": "Writing Skills Skill",
+      "target": "Wiki Log",
+      "source_files": [
+        ".vibe/skills/writing-skills/SKILL.md",
+        ".vibe/skills/writing-skills/wiki/log.md"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "conceptually_related_to",
+      "why": "peripheral node `Wiki Log` unexpectedly reaches hub `Writing Skills Skill`"
+    }
+  ],
+  "questions": [
+    {
+      "type": "bridge_node",
+      "question": "Why does `jobs` connect `CI Pipeline Config` to `Test Workflow Config`?",
+      "why": "High betweenness centrality (0.033) - this node is a cross-community bridge."
+    },
+    {
+      "type": "isolated_nodes",
+      "question": "What connects `eed-package-template`, `eed_basic_utils`, `Coding Standards and Preferences` to the rest of the system?",
+      "why": "14 weakly-connected nodes found - possible documentation gaps or missing edges."
+    },
+    {
+      "type": "low_cohesion",
+      "question": "Should `Test Workflow Config` be split into smaller, more focused modules?",
+      "why": "Cohesion score 0.11067193675889328 - nodes in this community are weakly interconnected."
+    },
+    {
+      "type": "bridge_node",
+      "question": "Why does `pytests` connect `CI Pipeline Config` to `Test Workflow Config`?",
+      "why": "High betweenness centrality (0.019) - this node is a cross-community bridge."
+    },
+    {
+      "type": "low_cohesion",
+      "question": "Should `Docker Setup` be split into smaller, more focused modules?",
+      "why": "Cohesion score 0.09523809523809523 - nodes in this community are weakly interconnected."
+    },
+    {
+      "type": "low_cohesion",
+      "question": "Should `Python Testing Utils` be split into smaller, more focused modules?",
+      "why": "Cohesion score 0.1437908496732026 - nodes in this community are weakly interconnected."
+    },
+    {
+      "type": "low_cohesion",
+      "question": "Should `CI Pipeline Config` be split into smaller, more focused modules?",
+      "why": "Cohesion score 0.11764705882352941 - nodes in this community are weakly interconnected."
+    }
+  ]
+}

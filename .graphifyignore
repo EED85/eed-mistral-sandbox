@@ -1,0 +1,6 @@
+# graphify: never ingest the graph's own output or huge generated files
+graphify-out/
+uv.lock
+.git/
+.venv/
+__pycache__/
