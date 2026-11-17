@@ -1,0 +1,192 @@
+{
+  ".devcontainer/devcontainer.json": {
+    "mtime": 1794940783.191882,
+    "seen": 1794944953.38986,
+    "ast_hash": "f388baec0c4d08ea789391176efbbf33",
+    "semantic_hash": "f388baec0c4d08ea789391176efbbf33",
+    "ast_empty": true
+  },
+  ".devcontainer/kill-vibe-sessions.sh": {
+    "mtime": 1794940783.191882,
+    "seen": 1794944953.3898664,
+    "ast_hash": "5410fa6eeb428e880f6f031e056d2237",
+    "semantic_hash": "5410fa6eeb428e880f6f031e056d2237"
+  },
+  ".github/rulesets/branches/main.json": {
+    "mtime": 1794940783.1942284,
+    "seen": 1794944953.3916807,
+    "ast_hash": "73e677ab49710922f6ae75e36f315a3d",
+    "semantic_hash": "73e677ab49710922f6ae75e36f315a3d",
+    "ast_empty": true
+  },
+  ".github/rulesets/tags/semantic versioning.json": {
+    "mtime": 1794940783.1942284,
+    "seen": 1794944953.3916833,
+    "ast_hash": "45532290e61c5b8b6f8a5053de90c020",
+    "semantic_hash": "45532290e61c5b8b6f8a5053de90c020",
+    "ast_empty": true
+  },
+  ".github/workflows/ci.yml": {
+    "mtime": 1794940783.1942284,
+    "seen": 1794944953.391685,
+    "ast_hash": "2f7b4e45eedf064134db6d7c63cb71ec",
+    "semantic_hash": "2f7b4e45eedf064134db6d7c63cb71ec"
+  },
+  ".github/workflows/pytests.yml": {
+    "mtime": 1794940783.1956925,
+    "seen": 1794944953.3949904,
+    "ast_hash": "d453c5d7b9b5ac7f5a6da20d1fe80610",
+    "semantic_hash": "d453c5d7b9b5ac7f5a6da20d1fe80610"
+  },
+  ".github/workflows/pytests_cov.yml": {
+    "mtime": 1794940783.1956925,
+    "seen": 1794944953.4004884,
+    "ast_hash": "c9511d7a8be0ff9d9a23a9e43aa0af61",
+    "semantic_hash": "c9511d7a8be0ff9d9a23a9e43aa0af61"
+  },
+  ".github/workflows/ruff.yml": {
+    "mtime": 1794940783.1956925,
+    "seen": 1794944953.4036925,
+    "ast_hash": "cad0a1bc6f6ac7263d7b65e7434851d4",
+    "semantic_hash": "cad0a1bc6f6ac7263d7b65e7434851d4"
+  },
+  ".github/workflows/update_eed_basic_utils.yml": {
+    "mtime": 1794940783.1956925,
+    "seen": 1794944953.4070206,
+    "ast_hash": "568071cdd613795a4c53b1a244c26e7a",
+    "semantic_hash": "568071cdd613795a4c53b1a244c26e7a"
+  },
+  ".pre-commit-config.yaml": {
+    "mtime": 1794940783.1971438,
+    "seen": 1794944953.4105897,
+    "ast_hash": "9f8685cedd54f20c5c92b5462d9482a1",
+    "semantic_hash": "9f8685cedd54f20c5c92b5462d9482a1"
+  },
+  ".vscode/tasks.json": {
+    "mtime": 1794940783.1976824,
+    "seen": 1794944953.4112659,
+    "ast_hash": "4d6312e1970654887a373ac2fc45e770",
+    "semantic_hash": "4d6312e1970654887a373ac2fc45e770",
+    "ast_empty": true
+  },
+  "docker-compose.yml": {
+    "mtime": 1794940783.1981852,
+    "seen": 1794944953.4112694,
+    "ast_hash": "7cfc5c306700f21229dc1ddc8460e7c6",
+    "semantic_hash": "7cfc5c306700f21229dc1ddc8460e7c6"
+  },
+  "pyproject.toml": {
+    "mtime": 1794940783.1981852,
+    "seen": 1794944953.4120235,
+    "ast_hash": "a675a9daf765444eecc56622bc5ea8fe",
+    "semantic_hash": "a675a9daf765444eecc56622bc5ea8fe"
+  },
+  "src/eed_package_template/__init__.py": {
+    "mtime": 1794940783.1991887,
+    "seen": 1794944953.4128053,
+    "ast_hash": "d41155f101fd7512a5d0b65fecdf83ec",
+    "semantic_hash": "d41155f101fd7512a5d0b65fecdf83ec"
+  },
+  "src/eed_package_template/hello_world.py": {
+    "mtime": 1794940783.1991887,
+    "seen": 1794944953.4166121,
+    "ast_hash": "2072fc47b0343f421153b3c0281c8063",
+    "semantic_hash": "2072fc47b0343f421153b3c0281c8063"
+  },
+  "tests/conftest.py": {
+    "mtime": 1794940783.2001903,
+    "seen": 1794944953.4215047,
+    "ast_hash": "55cb0d80938ea0ad356cf64c9aaa8d33",
+    "semantic_hash": "55cb0d80938ea0ad356cf64c9aaa8d33"
+  },
+  "tests/test_hello_world.py": {
+    "mtime": 1794940783.2006955,
+    "seen": 1794944953.4248912,
+    "ast_hash": "b73406c301c76e9f6ce114031db1b36c",
+    "semantic_hash": "b73406c301c76e9f6ce114031db1b36c"
+  },
+  "tests/test_package_import.py": {
+    "mtime": 1794940783.2006955,
+    "seen": 1794944953.4276004,
+    "ast_hash": "2693e957e666ddd8cd1cc61fd31d3e79",
+    "semantic_hash": "2693e957e666ddd8cd1cc61fd31d3e79"
+  },
+  ".github/instructions/eed_instructions.instructions.md": {
+    "mtime": 1794940783.1930447,
+    "seen": 1794944953.4304743,
+    "ast_hash": "8fc139a5f49bdec3676ad14e6798dcce",
+    "semantic_hash": "8fc139a5f49bdec3676ad14e6798dcce"
+  },
+  ".vibe/skills/writing-skills/SKILL.md": {
+    "mtime": 1794944764.0122313,
+    "seen": 1794944953.435753,
+    "ast_hash": "f00df807479adeb1ffb9f97eb13fc3ce",
+    "semantic_hash": "f00df807479adeb1ffb9f97eb13fc3ce"
+  },
+  ".vibe/skills/writing-skills/raw/karpathy-llm-wiki.md": {
+    "mtime": 1794944684.977803,
+    "seen": 1794944953.446485,
+    "ast_hash": "7953122eebc7aca33db25cd86a89a19a",
+    "semantic_hash": "7953122eebc7aca33db25cd86a89a19a"
+  },
+  ".vibe/skills/writing-skills/raw/vibe-skill-creator-SKILL.md": {
+    "mtime": 1794944684.9907444,
+    "seen": 1794944953.4545681,
+    "ast_hash": "8c0e303d9850714115ea83588d427aca",
+    "semantic_hash": "8c0e303d9850714115ea83588d427aca"
+  },
+  ".vibe/skills/writing-skills/wiki/concepts/knowledge-graph-graphifyy.md": {
+    "mtime": 1794944764.166499,
+    "seen": 1794944953.462716,
+    "ast_hash": "06dfe25fc8368658c2851f4ca9faaf65",
+    "semantic_hash": "06dfe25fc8368658c2851f4ca9faaf65"
+  },
+  ".vibe/skills/writing-skills/wiki/concepts/llm-wiki-pattern.md": {
+    "mtime": 1794944764.1031356,
+    "seen": 1794944953.4741652,
+    "ast_hash": "8b3baae9bbb6b5212edcc4a065a455fe",
+    "semantic_hash": "8b3baae9bbb6b5212edcc4a065a455fe"
+  },
+  ".vibe/skills/writing-skills/wiki/concepts/skill-anatomy.md": {
+    "mtime": 1794944764.1311238,
+    "seen": 1794944953.484402,
+    "ast_hash": "340b4314c0fe09a42b5e2e1508347753",
+    "semantic_hash": "340b4314c0fe09a42b5e2e1508347753"
+  },
+  ".vibe/skills/writing-skills/wiki/index.md": {
+    "mtime": 1794944764.0340335,
+    "seen": 1794944953.497681,
+    "ast_hash": "7b6c6107072799148c45ce9fc90ec04c",
+    "semantic_hash": "7b6c6107072799148c45ce9fc90ec04c"
+  },
+  ".vibe/skills/writing-skills/wiki/log.md": {
+    "mtime": 1794944764.1719189,
+    "seen": 1794944953.5051737,
+    "ast_hash": "bf976dc2616d4df9ee0b995f75b4498b",
+    "semantic_hash": "bf976dc2616d4df9ee0b995f75b4498b"
+  },
+  ".vibe/skills/writing-skills/wiki/sources/karpathy-llm-wiki.md": {
+    "mtime": 1794944764.0637116,
+    "seen": 1794944953.5123622,
+    "ast_hash": "57ab4b71eb74c48a08e799bc85390250",
+    "semantic_hash": "57ab4b71eb74c48a08e799bc85390250"
+  },
+  ".vibe/skills/writing-skills/wiki/sources/vibe-skill-creator.md": {
+    "mtime": 1794944764.0805285,
+    "seen": 1794944953.5272937,
+    "ast_hash": "5edb21e5b30640187fc962fb26bf6fa7",
+    "semantic_hash": "5edb21e5b30640187fc962fb26bf6fa7"
+  },
+  "README.md": {
+    "mtime": 1794942338.1838243,
+    "seen": 1794944953.5404048,
+    "ast_hash": "e4537197d7ced0481dfe36d1bfcfb62f",
+    "semantic_hash": "e4537197d7ced0481dfe36d1bfcfb62f"
+  },
+  "THIRD_PARTY_NOTICES.md": {
+    "mtime": 1794941687.358422,
+    "seen": 1794944953.5416756,
+    "ast_hash": "f38f738be1bceef9f79204cdeb6be126",
+    "semantic_hash": "f38f738be1bceef9f79204cdeb6be126"
+  }
+}
