@@ -1,0 +1,162 @@
+{
+  "version": "2.0.0",
+  "inputs": [
+    {
+      "id": "confirmKillVibeSessions",
+      "type": "promptString",
+      "description": "Type KILL to terminate all Vibe sessions in the container",
+      "default": ""
+    }
+  ],
+  "tasks": [
+    {
+      "label": "Docker: Start Docker Desktop",
+      "type": "shell",
+      "command": "docker",
+      "args": ["desktop", "start"],
+      "problemMatcher": []
+    },
+    {
+      "label": "Docker: Build development image",
+      "type": "shell",
+      "command": "docker",
+      "args": ["compose", "build", "ai"],
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "group": "build",
+      "problemMatcher": []
+    },
+    {
+      "label": "Docker: Start development container",
+      "type": "shell",
+      "command": "docker",
+      "args": ["compose", "up", "--detach", "--build", "ai"],
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "dependsOn": "Docker: Start Docker Desktop",
+      "dependsOrder": "sequence",
+      "problemMatcher": []
+    },
+    {
+      "label": "Docker: List containers",
+      "type": "shell",
+      "command": "docker",
+      "args": ["compose", "ps", "--all"],
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "Docker: Follow container logs",
+      "type": "shell",
+      "command": "docker",
+      "args": ["compose", "logs", "--follow", "ai"],
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "presentation": {
+        "reveal": "always",
+        "panel": "dedicated",
+        "focus": true
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "Docker: Open container shell",
+      "type": "shell",
+      "command": "docker",
+      "args": ["compose", "exec", "ai", "bash"],
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "presentation": {
+        "reveal": "always",
+        "panel": "dedicated",
+        "focus": true
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "Mistral Vibe: Start assistant",
+      "type": "shell",
+      "command": "docker",
+      "args": ["compose", "exec", "ai", "vibe"],
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "runOptions": {
+        "instanceLimit": 10
+      },
+      "presentation": {
+        "reveal": "always",
+        "panel": "new",
+        "focus": true
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "Mistral Vibe: Kill all sessions",
+      "type": "shell",
+      "command": "docker",
+      "args": [
+        "compose",
+        "exec",
+        "--no-TTY",
+        "ai",
+        "bash",
+        "/workspace/.devcontainer/kill-vibe-sessions.sh",
+        "${input:confirmKillVibeSessions}"
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}",
+        "env": {
+          "MSYS_NO_PATHCONV": "1"
+        }
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "Docker: Restart container",
+      "type": "shell",
+      "command": "docker",
+      "args": ["compose", "restart", "ai"],
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "Docker: Stop container",
+      "type": "shell",
+      "command": "docker",
+      "args": ["compose", "stop", "ai"],
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "Docker: Start stopped container",
+      "type": "shell",
+      "command": "docker",
+      "args": ["compose", "start", "ai"],
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "Docker: Stop and remove container (keep data)",
+      "type": "shell",
+      "command": "docker",
+      "args": ["compose", "down"],
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "problemMatcher": []
+    }
+  ]
+}
