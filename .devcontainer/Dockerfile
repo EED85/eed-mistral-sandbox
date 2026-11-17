@@ -55,6 +55,9 @@ RUN curl -sL https://install.duckdb.org | sh && \
     cp /root/.duckdb/cli/latest/duckdb /usr/local/bin/duckdb && \
     chmod +x /usr/local/bin/duckdb
 
+COPY THIRD_PARTY_NOTICES.md /usr/share/doc/eed-mistral-sandbox/THIRD_PARTY_NOTICES.md
+COPY licenses/graphify/ /usr/share/licenses/graphify/
+
 RUN useradd -m vscode && \
     mkdir -p /home/vscode/.vibe && \
     printf '\nif [[ $- == *i* ]]; then\n  source /usr/local/share/fzf/key-bindings.bash\n  eval "$(starship init bash)"\nfi\n' >> /home/vscode/.bashrc && \
@@ -63,4 +66,5 @@ ENV UV_TOOL_BIN_DIR=/home/vscode/.local/bin
 ENV PATH="/home/vscode/.local/bin:${PATH}"
 USER vscode
 RUN duckdb -c "INSTALL encodings; INSTALL excel; INSTALL httpfs; INSTALL quack;" && \
-    uv tool install mistral-vibe
+    uv tool install mistral-vibe && \
+    uv tool install graphifyy

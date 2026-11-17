@@ -121,7 +121,12 @@ The container also includes `eza`, `fzf`, and Starship. Starship is the default
 prompt in interactive Bash shells; fzf's Bash key bindings are loaded on shell
 startup (for example, `Ctrl+R` for history search and `Ctrl+T` for file
 search). DuckDB is installed with the `encodings`, `excel`, `httpfs`, and
-`quack` core extensions.
+`quack` core extensions. Graphify is installed as a CLI with `uv tool install
+graphifyy`; run `graphify --help` inside the container. Its `graphify install`
+command currently targets Claude Code, so Vibe skill integration is not
+configured yet. Graphify's license and attribution details are in
+[THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md) and are included in the image
+under `/usr/share/licenses/graphify`.
 
 LiteLLM is installed as a `uv` development dependency, so `uv sync` makes its
 `litellm` command available in the project environment. LiteLLM provides an API
