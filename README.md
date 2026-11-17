@@ -103,7 +103,9 @@ image, listing containers, following logs, opening a container shell,
 launching Vibe, stopping all Vibe sessions (requires typing `KILL` to confirm),
 restarting, stopping, and starting the service. **Docker: Stop and remove
 container (keep data)** runs `docker compose down`; it preserves the named Vibe
-volume.
+volume. Each run of **Mistral Vibe: Start assistant** opens a new terminal, and
+up to 10 instances of that task can run concurrently. Switch between their
+terminals in VS Code's Terminal panel.
 
 Mistral Vibe is the interactive coding assistant CLI, similar in purpose to
 Claude Code. Start it in the project from the container:
