@@ -1,0 +1,66 @@
+name: Publish sandbox container
+
+on:
+  push:
+    tags:
+      - "*.*.*"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  packages: write
+
+jobs:
+  publish:
+    if: github.ref_type == 'tag'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out source
+        uses: actions/checkout@v4
+
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v3
+
+      - name: Log in to GitHub Container Registry
+        uses: docker/login-action@v3
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Set image metadata
+        id: meta
+        uses: docker/metadata-action@v5
+        with:
+          images: ghcr.io/eed85/eed-mistral-sandbox
+          flavor: latest=false
+          tags: type=ref,event=tag
+
+      - name: Build and publish image
+        uses: docker/build-push-action@v6
+        with:
+          context: .
+          file: .devcontainer/Dockerfile
+          push: true
+          tags: ${{ steps.meta.outputs.tags }}
+          labels: ${{ steps.meta.outputs.labels }}
+
+      - name: Notify wiki runtime
+        env:
+          GH_TOKEN: ${{ secrets.WIKI_RUNTIME_DISPATCH_TOKEN }}
+          IMAGE_TAG: ${{ github.ref_name }}
+        run: |
+          if [ -z "$GH_TOKEN" ]; then
+            echo "::warning::Set WIKI_RUNTIME_DISPATCH_TOKEN to trigger eed-wiki-runtime rebuilds."
+            exit 0
+          fi
+
+          payload=$(jq -nc --arg tag "$IMAGE_TAG" \
+            '{event_type:"sandbox-image-published",client_payload:{image_tag:$tag}}')
+          curl --fail-with-body --silent --show-error \
+            --request POST \
+            --url https://api.github.com/repos/EED85/eed-wiki-runtime/dispatches \
+            --header "Accept: application/vnd.github+json" \
+            --header "Authorization: Bearer $GH_TOKEN" \
+            --header "X-GitHub-Api-Version: 2022-11-28" \
+            --data "$payload"

@@ -1,5 +1,19 @@
 # eed_package_template
 
+## Sandbox container image
+
+Version tags matching `X.Y.Z` publish the development container image to
+`ghcr.io/eed85/eed-mistral-sandbox:X.Y.Z`. The image is built from
+`.devcontainer/Dockerfile` and contains the base Mistral Vibe environment; wiki
+tools and wiki content belong in separate repositories.
+
+The first published image is private by default. Change the package visibility
+to **Public** in GitHub Packages before using it as a base image in other
+public repositories. To automatically rebuild `eed-wiki-runtime` after a
+version is published, configure a repository secret named
+`WIKI_RUNTIME_DISPATCH_TOKEN` with permission to dispatch workflows in that
+repository. The runtime rebuild workflow can also be started manually.
+
 ## Creating a New Repository from This Template
 
 1. In the EED-Solutions organization, create a new repository using this template and assign it a new name, such as `eed_my_new_package`.
