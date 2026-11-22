@@ -7,10 +7,12 @@ services:
     stdin_open: true
     tty: true
     init: true
+    shm_size: "2gb"
     restart: unless-stopped
     command: ["sleep", "infinity"]
     ports:
       - "127.0.0.1:4000:4000"
+      - "127.0.0.1:6080:6080"
     environment:
       MISTRAL_API_KEY: ${MISTRAL_API_KEY:-}
       DATA_READ_DIR: ${DATA_READ_DIR:-}

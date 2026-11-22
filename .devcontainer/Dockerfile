@@ -55,6 +55,54 @@ RUN curl -sL https://install.duckdb.org | sh && \
     cp /root/.duckdb/cli/latest/duckdb /usr/local/bin/duckdb && \
     chmod +x /usr/local/bin/duckdb
 
+# Playwright-Browser ins Image backen; das Python-Package selbst kommt
+# aus der Projekt-Umgebung (pyproject dev-group, gleiche Version pinnen).
+# Bibliotheken bewusst per Hand statt `--with-deps`: Liste abgeleitet aus
+# Chromium-eigener deb.deps + ldd-Schluss einer Chromium-1255-Binärdatei.
+ENV PLAYWRIGHT_BROWSERS_PATH=/ms-playwright
+RUN set -eux; \
+    apt-get update; \
+    apt-get install -y --no-install-recommends \
+        fonts-liberation \
+        fonts-noto-color-emoji \
+        libasound2 \
+        libatk-bridge2.0-0 \
+        libatk1.0-0 \
+        libatspi2.0-0 \
+        libatomic1 \
+        libcairo2 \
+        libcups2 \
+        libdbus-1-3 \
+        libdrm2 \
+        libgbm1 \
+        libglib2.0-0 \
+        libnspr4 \
+        libnss3 \
+        libpango-1.0-0 \
+        libwayland-client0 \
+        libx11-6 \
+        libxcb1 \
+        libxcomposite1 \
+        libxdamage1 \
+        libxext6 \
+        libxfixes3 \
+        libxkbcommon0 \
+        libxrandr2; \
+    uvx --from playwright==1.65.2 playwright install chromium; \
+    apt-get clean; \
+    rm -rf /var/lib/apt/lists/* /root/.cache/uv
+
+# Live-Betrachtung des automatisierten Browsers (NoVNC unter Port 6080)
+RUN set -eux; \
+    apt-get update; \
+    apt-get install -y --no-install-recommends \
+        novnc \
+        websockify \
+        x11vnc \
+        xvfb; \
+    apt-get clean; \
+    rm -rf /var/lib/apt/lists/*
+
 RUN useradd -m vscode && \
     mkdir -p /home/vscode/.vibe && \
     printf '\nif [[ $- == *i* ]]; then\n  source /usr/local/share/fzf/key-bindings.bash\n  eval "$(starship init bash)"\nfi\n' >> /home/vscode/.bashrc && \
@@ -62,5 +110,5 @@ RUN useradd -m vscode && \
 ENV UV_TOOL_BIN_DIR=/home/vscode/.local/bin
 ENV PATH="/home/vscode/.local/bin:${PATH}"
 USER vscode
-RUN duckdb -c "INSTALL encodings; INSTALL excel; INSTALL httpfs; INSTALL quack;" && \
+RUN duckdb -c "INSTALL encodings; INSTALL excel; INSTALL httpfs; INSTALL quack; INSTALL sqlite; INSTALL ducklake" && \
     uv tool install mistral-vibe
